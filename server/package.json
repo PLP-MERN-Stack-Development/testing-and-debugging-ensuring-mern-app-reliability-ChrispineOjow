@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "jest --selectProjects server",
+    "test:unit": "jest --selectProjects server --testPathPattern=unit",
+    "test:integration": "jest --selectProjects server --testPathPattern=integration",
+    "setup-test-db": "node scripts/setupTestDb.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.4",
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
+  }
+}
+

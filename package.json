@@ -1,0 +1,27 @@
+{
+  "name": "mern-testing",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "test": "jest --runInBand",
+    "test:unit": "jest --runInBand --selectProjects server client --testPathPattern=unit",
+    "test:integration": "jest --runInBand --selectProjects server client --testPathPattern=integration",
+    "test:e2e": "npm run cy:run --prefix client",
+    "coverage": "jest --coverage",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.24.0",
+    "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0"
+  }
+}
+
